@@ -16,8 +16,5 @@ import pbr.version
 
 __all__ = ['__version__']
 
-version_info = pbr.version.VersionInfo('armada')
-try:
-    __version__ = version_info.version_string()
-except AttributeError:
-    __version__ = None
+version_info = pbr.version.SemanticVersion('armada')
+__version__ = version_info.debian_string()

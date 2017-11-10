@@ -38,6 +38,7 @@ CONF = cfg.CONF
     '--url', help='Armada Service Endpoint', envvar='HOST', default=None)
 @click.option(
     '--token', help='Keystone Service Token', envvar='TOKEN', default=None)
+@click.version_option()
 @click.pass_context
 def main(ctx, debug, api, url, token):
     """
